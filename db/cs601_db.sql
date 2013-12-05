@@ -147,7 +147,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cs601`;
-INSERT INTO `cs601`.`categories` (`categoryId`, `category_name`, `category_desc`) VALUES (NULL, 'cat1', 'cat1 desc');
+INSERT INTO `cs601`.`categories` (`categoryId`, `category_name`, `category_desc`) VALUES (NULL, 'Appetizer', 'Appetizer desc');
+INSERT INTO `cs601`.`categories` (`categoryId`, `category_name`, `category_desc`) VALUES (NULL, 'Dessert', 'Desert desc');
 
 COMMIT;
 
@@ -157,7 +158,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cs601`;
-INSERT INTO `cs601`.`ingredients` (`ingredientId`, `ingredient_name`, `ingredient_desc`) VALUES (NULL, 'salt', 'sea salt');
+INSERT INTO `cs601`.`ingredients` (`ingredientId`, `ingredient_name`, `ingredient_desc`) VALUES (NULL, 'salt', 'salt desc');
+INSERT INTO `cs601`.`ingredients` (`ingredientId`, `ingredient_name`, `ingredient_desc`) VALUES (NULL, 'pepper', 'pepper desc');
 
 COMMIT;
 
