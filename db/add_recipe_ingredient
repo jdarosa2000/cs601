@@ -1,2 +1,0 @@
-create trigger add_recipe_ingredient after insert on recipe
-for each row  insert into recipe_ingredient (recipeId, ingredientId) values (new.recipeId, new.ingredientId);

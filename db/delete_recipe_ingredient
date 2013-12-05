@@ -1,4 +1,0 @@
-USE `cs601`;
-DELIMITER $$
-CREATE TRIGGER `recipe_ADEL` AFTER DELETE ON `recipe` FOR EACH ROW
-delete from recipe_ingredient where recipe.recipeId = recipe_ingredient.recipeId;
