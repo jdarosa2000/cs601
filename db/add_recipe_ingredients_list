@@ -1,0 +1,7 @@
+delimiter #
+
+create trigger add_recipe_ingredients_list after insert on recipe
+for each row
+begin
+  insert into recipe_ingredient (recipeId, ingredientId) values (new.recipeId, new.ingredientId);
+end#
