@@ -25,7 +25,7 @@ Tags: </br>
 Category: </br> 
 </br>  <div id="categories_listbox"></div> </br>
 User: </br> 
-</br> <input type="text" name="recipe_user" size="80"> </br>
+</br> <div id="users_listbox"></div> </br>
 Instructions: </br> 
 </br> <textarea name="recipe_instructions"rows="20" cols="80"></textarea> </br>
 Ingredients: </br> 
@@ -42,33 +42,67 @@ Image: </br>
 <script type="text/javascript">
 	$(document).ready(function () {
 		// prepare the data
+		var users_source =
+		{
+			datatype: "json",
+			datafields: [
+				{ name: 'user_email' },
+				{ name: 'user_name' },
+			],
+			url: '../php/users.php'
+		};
+		var usersDataAdapter = new $.jqx.dataAdapter(users_source);
+		
+		$("#users_listbox").jqxDropDownList(
+		{
+			source: usersDataAdapter,
+			theme: 'classic',
+			width: 200,
+			height: 25,
+			selectedIndex: 1,
+			displayMember: 'user_email',
+			valueMember: 'user_email'
+		});
+		
+		/*
+		// bind dropdown list to 'select' event.
+		$('#users_listbox').bind('select', function (event) {
+			var args = event.args;
+			var selected_user = $('#users_listbox').jqxDropDownList('getItem', args.index);
+			alert('Selected: ' + selected_user.value);
+		});
+		*/
+		
 		var categories_source =
 		{
 			datatype: "json",
 			datafields: [
 				{ name: 'category_name' },
+				{ name: 'categoryId' },
 			],
 			url: '../php/categories.php'
 		};
-		var dataAdapter = new $.jqx.dataAdapter(categories_source);
+		var catgoriesDataAdapter = new $.jqx.dataAdapter(categories_source);
 		
 		$("#categories_listbox").jqxDropDownList(
 		{
-			source: dataAdapter,
+			source: catgoriesDataAdapter,
 			theme: 'classic',
 			width: 200,
 			height: 25,
 			selectedIndex: 1,
-			displayMember: 'categoryId',
-			valueMember: 'category_name'
+			displayMember: 'category_name',
+			valueMember: 'categoryId'
 		});
 		
+		/*
 		// bind category dropdown list to 'select' event.
 		$('#categories_listbox').bind('select', function (event) {
 			var args = event.args;
 			var selected_category = $('#categories_listbox').jqxDropDownList('getItem', args.index);
-			alert('Selected: ' + selected_category.label);
+			alert('Selected: ' + selected_category.value);
 		});
+		*/
 		
 		// prepare the data
 		var ingredients_source =

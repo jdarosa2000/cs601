@@ -169,7 +169,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cs601`;
-INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('a@b.com', 'a');
+INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jdarosa2000@hotmail.com', 'Jaime DaRosa');
+INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('cpersad@bu.edu', 'Carolyn Persad');
+INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jamesb@bu.edu', 'James Bransford');
 
 COMMIT;
 
