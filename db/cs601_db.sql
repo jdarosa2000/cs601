@@ -105,10 +105,10 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `cs601`.`tags` ;
 
 CREATE TABLE IF NOT EXISTS `cs601`.`tags` (
-  `tagId` INT NOT NULL,
+  `tagId` INT NOT NULL AUTO_INCREMENT,
   `tag_name` VARCHAR(256) NOT NULL,
-  `tagscol` VARCHAR(45) NULL,
-  PRIMARY KEY (`tagId`, `tag_name`))
+  PRIMARY KEY (`tagId`, `tag_name`),
+  UNIQUE INDEX `tag_name_UNIQUE` (`tag_name` ASC))
 ENGINE = InnoDB;
 
 
@@ -172,6 +172,17 @@ USE `cs601`;
 INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jdarosa2000@hotmail.com', 'Jaime DaRosa');
 INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('cpersad@bu.edu', 'Carolyn Persad');
 INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jamesb@bu.edu', 'James Bransford');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `cs601`.`tags`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `cs601`;
+INSERT INTO `cs601`.`tags` (`tagId`, `tag_name`) VALUES (NULL, 'tag1');
+INSERT INTO `cs601`.`tags` (`tagId`, `tag_name`) VALUES (NULL, 'tag2');
 
 COMMIT;
 
