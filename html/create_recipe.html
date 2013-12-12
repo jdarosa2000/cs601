@@ -1,5 +1,11 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Delicious Home</title>
+
+<link href="../css/styles.css" rel="stylesheet" type="text/css" />
 	<!-- http://www.jqwidgets.com/jquery-widgets-documentation/ -->
     <link rel="stylesheet" href="../jqwidgets/styles/jqx.base.css" type="text/css">
     <link rel="stylesheet" href="../jqwidgets/styles/jqx.classic.css" type="text/css">
@@ -15,6 +21,24 @@
 <body>
 
 
+
+<div id="inner_wrapper"> 
+
+<div id="header">
+<div id="logo"><img src="../images/Logo.jpg" /></div>
+<div id="navbar">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="search.html">Search</a></li>
+<li><a href="submit.html">Submit</a></li>
+<li><a href="#">About</a></li>
+</ul>
+</div>
+</div> 
+
+<center><img src="../images/submit_head.jpg" /></center>
+
+<div id="form">
 <form action="../php/insert.php" method="post">
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
@@ -37,8 +61,9 @@ Image: </br>
 <input type="button" value="Upload Image">
 </br> </br>
 </br><input type="submit" value="Submit Recipe"> 
-
 </form>
+</div>
+
 <script type="text/javascript">
 	$(document).ready(function () {
 		// prepare the data
