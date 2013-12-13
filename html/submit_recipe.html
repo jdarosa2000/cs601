@@ -4,22 +4,10 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>The Delicious Home</title>
-
 <link href="../css/styles.css" rel="stylesheet" type="text/css" />
-	<!-- http://www.jqwidgets.com/jquery-widgets-documentation/ -->
-    <link rel="stylesheet" href="../jqwidgets/styles/jqx.base.css" type="text/css">
-    <link rel="stylesheet" href="../jqwidgets/styles/jqx.classic.css" type="text/css">
-    <script type="text/javascript" src="../scripts/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxcore.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxbuttons.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxscrollbar.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdata.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxlistbox.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxcombobox.js"></script>
-    <script type="text/javascript" src="../jqwidgets/jqxdropdownlist.js"></script>
 </head>
-<body>
 
+<body>
 
 
 <div id="inner_wrapper"> 
@@ -29,14 +17,17 @@
 <div id="navbar">
 <ul>
 <li><a href="../index.html">Home</a></li>
-<li><a href="search.html">Search</a></li>
-<li><a href="submit.html">Submit</a></li>
-<li><a href="#">About</a></li>
+<li><a href="browse.html">Browse</a></li>
+<li><a href="submit_recipe.html">Submit</a></li>
+<li><a href="about.html">About</a></li>
 </ul>
 </div>
 </div> 
 
-<center><img src="../images/submit_head.jpg" /></center>
+
+<div id="gallery">
+<img src="../images/cover1.jpg" />
+</div>
 
 <div id="form">
 <form action="../php/insert.php" method="post">
@@ -45,7 +36,16 @@ Title: </br>
 Description: </br> 
 </br> <textarea rows="2" name="recipe_desc" cols="80"></textarea> </br>
 Category: </br> 
-</br> <input type="text" name="recipe_category" size="80"> </br>
+<br> <select name="category">
+          <option value="Pasta">Pasta</option>
+          <option value="Fish">Fish</option>
+          <option value="Beef">Beef</option>
+          <option value="Soup">Soup</option>
+          <option value="Appetizer">Appetizer</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Vegetable">Vegetable</option>
+      </select>
+</br>    
 User: </br> 
 </br> <input type="text" name="recipe_user" size="80"> </br>
 Instructions: </br> 
