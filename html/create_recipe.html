@@ -20,28 +20,22 @@ Title: </br>
 </br> <input type="text" name="recipe_title" size="80"> </br>
 Description: </br> 
 </br> <textarea rows="2" name="recipe_desc" cols="80"></textarea> </br>
-Tags: </br> 
-</br> <input type="text" name="recipe_tags" size="80"> </br>
 Category: </br> 
-</br>  <div id="categories_listbox"></div> </br>
+</br> <input type="text" name="recipe_category" size="80"> </br>
 User: </br> 
-</br> <div id="users_listbox"></div> </br>
+</br> <input type="text" name="recipe_user" size="80"> </br>
 Instructions: </br> 
 </br> <textarea name="recipe_instructions"rows="20" cols="80"></textarea> </br>
 Ingredients: </br> 
-<div id="ingredients_combobox"></div> </br>
-<input type="button" value="Add Ingredient"> </br>
 </br> <textarea name="recipe_ingredients"rows="20" cols="80"></textarea> </br>
-Image: </br> 
-<input type="button" value="Browse..."> <input type="text" name="image_file" size="80"> </br>
-<input type="button" value="Upload Image">
-</br> </br>
+</br>
 </br><input type="submit" value="Submit Recipe"> 
 
 </form>
 <script type="text/javascript">
 	$(document).ready(function () {
 		// prepare the data
+		/*
 		var users_source =
 		{
 			datatype: "json",
@@ -64,6 +58,8 @@ Image: </br>
 			valueMember: 'user_email'
 		});
 		
+		*/
+		
 		/*
 		// bind dropdown list to 'select' event.
 		$('#users_listbox').bind('select', function (event) {
@@ -73,6 +69,7 @@ Image: </br>
 		});
 		*/
 		
+		/*
 		var categories_source =
 		{
 			datatype: "json",
@@ -94,36 +91,9 @@ Image: </br>
 			displayMember: 'category_name',
 			valueMember: 'categoryId'
 		});
-		
-		/*
-		// bind category dropdown list to 'select' event.
-		$('#categories_listbox').bind('select', function (event) {
-			var args = event.args;
-			var selected_category = $('#categories_listbox').jqxDropDownList('getItem', args.index);
-			alert('Selected: ' + selected_category.value);
-		});
 		*/
 		
-		// prepare the data
-		var ingredients_source =
-		{
-			datatype: "json",
-			datafields: [
-				{ name: 'ingredient_name' },
-			],
-			url: '../php/ingredients.php'
-		};
-		var dataAdapter = new $.jqx.dataAdapter(ingredients_source);
-		$("#ingredients_combobox").jqxComboBox(
-		{
-			source: dataAdapter,
-			theme: 'classic',
-			width: 200,
-			height: 25,
-			selectedIndex: 0,
-			displayMember: 'ingredient_name',
-			valueMember: 'ingredient_name'
-		});
+		
 	})
 	
 </script>
