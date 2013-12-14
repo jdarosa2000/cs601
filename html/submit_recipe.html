@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -30,7 +31,7 @@
 </div>
 
 <div id="form">
-<form action="../php/insert.php" method="post">
+<form name="myForm" action="../php/insert.php" onsubmit="return validateForm()" method="post">
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
 Description: </br> 
@@ -48,17 +49,17 @@ Category: </br>
 </br>    
 User: </br> 
 </br> <input type="text" name="recipe_user" size="80"> </br>
-Instructions: </br> 
-</br> <textarea name="recipe_instructions"rows="20" cols="80"></textarea> </br>
 Ingredients: </br> 
 </br> <textarea name="recipe_ingredients"rows="20" cols="80"></textarea> </br>
+Instructions: </br> 
+</br> <textarea name="recipe_instructions"rows="20" cols="80"></textarea> </br>
 </br>
 </br><input type="submit" value="Submit Recipe"> 
 </form>
 </div>
 
 <script type="text/javascript">
-	$(document).ready(function () {
+	// $(document).ready(function () {
 		// prepare the data
 		/*
 		var users_source =
@@ -117,9 +118,44 @@ Ingredients: </br>
 			valueMember: 'categoryId'
 		});
 		*/
+				
+		function validateForm()
+	{
+		var a=document.forms["myForm"]["recipe_title"].value;
+		if (a==null || a=="")
+		{
+			alert("Enter a recipe title");
+			return false;
+		}
+	
+		var b=document.forms["myForm"]["recipe_desc"].value;
+		if (b==null || b=="")
+		{
+			alert("Enter a recipe description");
+			return false;
+		}
+    		
+		var d=document.forms["myForm"]["recipe_user"].value;
+		if (d==null || d=="")
+		{
+			alert("Enter a user name");
+			return false;
+		}
+
+  		var f=document.forms["myForm"]["recipe_ingredients"].value;
+		if (f==null || f=="")
+		{
+			alert("Enter ingredients");
+			return false;
+		}
+		var e=document.forms["myForm"]["recipe_instructions"].value;
+		if (e==null || e=="")
+		{
+			alert("Enter instructions");
+			return false;
+		}
 		
-		
-	})
+	}
 	
 </script>
 </body>
