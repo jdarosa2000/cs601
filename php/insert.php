@@ -7,9 +7,9 @@ if (mysqli_connect_errno())
   }
 
 
-$sql="INSERT INTO recipes (recipe_title, recipe_desc, user_email, category_name, recipe_steps)
+$sql="INSERT INTO recipes (recipe_title, recipe_desc, user_email, category_name, recipe_steps, ingredients)
 VALUES
-('$_POST[recipe_title]','$_POST[recipe_desc]', '$_POST[recipe_user]','$_POST[category]','$_POST[recipe_instructions]')";
+('$_POST[recipe_title]','$_POST[recipe_desc]', '$_POST[recipe_user]','$_POST[category]','$_POST[recipe_instructions]','$_POST[ingredients]')";
 
 
 if (!mysqli_query($con,$sql))

@@ -50,6 +50,7 @@
         <h2><?php echo $category_name; ?></h2>
         <table>
             <tr>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Submitted By</th>
@@ -59,11 +60,13 @@
 
             <?php foreach ($recipes as $recipe) : ?>
             <tr>
+                <td>
+                	<a href=<?php echo "../php/view_recipe.php?category=" . $category_name .
+						"&recipe_id=" . $recipe['recipeId']; ?>><?php echo $recipe['recipeId']; ?></a>
+                </td>
                 <td><?php echo $recipe['recipe_title']; ?></td>
                 <td><?php echo $recipe['recipe_desc']; ?></td>
                 <td><?php echo $recipe['user_email']; ?></td>
-                <td><?php echo $recipe['recipe_steps']; ?></td>
-                <td><?php echo $recipe['ingredients']; ?></td>
             </tr>
             <?php endforeach; ?>
         </table>
