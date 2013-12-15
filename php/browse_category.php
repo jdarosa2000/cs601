@@ -54,8 +54,7 @@
                 <th>Title</th>
                 <th>Description</th>
                 <th>Submitted By</th>
-                <th>Steps</th>
-                <th>Ingredients</th>
+
             </tr>
 
             <?php foreach ($recipes as $recipe) : ?>
