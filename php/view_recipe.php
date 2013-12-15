@@ -35,10 +35,22 @@
 <div id="logo"><img src="../images/Logo.jpg" /></div>
 <div id="navbar">
 <ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="../html/browse.html">Browse</a></li>
-<li><a href="../html/create_recipe.html">Submit</a></li>
-<li><a href="../html/about.html">About</a></li>
+<li><a href="../index.php">Home</a></li>
+<li><a href="browse.php">Browse</a></li>
+<li><a href="create_recipe.php">Submit</a></li>
+<li><a href="about.php">About</a></li>
+<?php
+	if (isset($_COOKIE["email"]))
+	{
+	  echo "<li>Welcome <br>" . $_COOKIE["email"] . "!</li>";
+	  echo "<li><a href=\"logout.php\">Logout</a></li>";
+	}
+	else
+	{
+	   echo "<li><a href=\"login.php\">Login</a></li>";
+	   echo "<li><a href=\"register.php\">Register</a></li>";
+	}
+?>
 </ul>
 </div>
 </div> 

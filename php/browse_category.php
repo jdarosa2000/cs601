@@ -1,4 +1,10 @@
 <?php
+
+	if (isset($_POST["email"])) {
+	  setcookie("email", $_POST["email"], null ,"/"); 
+	  header ("Location: about.php");
+	  }
+ 
     require 'database.php';
 
     // Get category ID
@@ -33,9 +39,21 @@
 <div id="navbar">
 <ul>
 <li><a href="../index.html">Home</a></li>
-<li><a href="../html/browse.html">Browse</a></li>
-<li><a href="../html/create_recipe.html">Submit</a></li>
-<li><a href="../html/about.html">About</a></li>
+<li><a href="../php/browse.php">Browse</a></li>
+<li><a href="../php/create_recipe.php">Submit</a></li>
+<li><a href="../php/about.php">About</a></li>
+<?php
+	if (isset($_COOKIE["email"]))
+	{
+	  echo "<li>Welcome <br>" . $_COOKIE["email"] . "!</li>";
+	  echo "<li><a href=\"logout.php\">Logout</a></li>";
+	}
+	else
+	{
+	   echo "<li><a href=\"login.php\">Login</a></li>";
+	   echo "<li><a href=\"register.php\">Register</a></li>";
+	}
+?>
 </ul>
 </div>
 </div> 
