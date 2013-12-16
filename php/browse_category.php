@@ -1,5 +1,7 @@
 <?php
 
+	session_start();
+
     require 'database.php';
 
     // Get category ID
@@ -38,15 +40,15 @@
 <li><a href="create_recipe.php">Submit</a></li>
 <li><a href="about.php">About</a></li>
 <?php
-	if (isset($_COOKIE["email"]))
+	if (isset($_SESSION["email"]))
 	{
-	  echo "<li>Welcome <br>" . $_COOKIE["email"] . "!</li>";
-	  echo "<li><a href=\"logout.php\">Logout</a></li>";
+	  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
+	  echo "<li><a href=\"php/logout.php\">Logout</a></li>";
 	}
 	else
 	{
-	   echo "<li><a href=\"login.php\">Login</a></li>";
-	   echo "<li><a href=\"register.php\">Register</a></li>";
+	   echo "<li><a href=\"php/login.php\">Login</a></li>";
+	   echo "<li><a href=\"php/register.php\">Register</a></li>";
 	}
 ?>
 </ul>

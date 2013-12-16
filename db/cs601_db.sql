@@ -43,9 +43,13 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `cs601`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `cs601`.`users` (
-  `user_email` VARCHAR(256) NOT NULL,
+  `userId` INT NOT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(256) NOT NULL,
-  PRIMARY KEY (`user_email`))
+  `user_email` VARCHAR(256) NOT NULL,
+  `user_password` VARCHAR(45) NULL,
+  PRIMARY KEY (`userId`),
+  UNIQUE INDEX `user_email_UNIQUE` (`user_email` ASC),
+  UNIQUE INDEX `userId_UNIQUE` (`userId` ASC))
 ENGINE = InnoDB;
 
 
@@ -85,9 +89,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cs601`;
-INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jdarosa2000@hotmail.com', 'Jaime DaRosa');
-INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('cpersad@bu.edu', 'Carolyn Persad');
-INSERT INTO `cs601`.`users` (`user_email`, `user_name`) VALUES ('jamesb@bu.edu', 'James Bransford');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Jaime DaRosa', 'jdarosa2000@hotmail.com', 'jdarosa2000@hotmail.com');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Carolyn Persad', 'cpersad@bu.edu', 'cpersad@bu.edu');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'James Bransford', 'jamesb@bu.edu', 'jamesb@bu.edu');
 
 COMMIT;
 

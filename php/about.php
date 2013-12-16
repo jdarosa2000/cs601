@@ -1,10 +1,5 @@
 <?php
-
-if (isset($_POST["email"])) {
-  setcookie("email", $_POST["email"], null ,"/"); 
-  header ("Location: about.php");
-  }
-  
+	session_start();
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -30,18 +25,17 @@ if (isset($_POST["email"])) {
 <li><a href="browse.php">Browse</a></li>
 <li><a href="submit_recipe.php">Submit</a></li>
 <?php
-	if (isset($_COOKIE["email"]))
+	if (isset($_SESSION["email"]))
 	{
-	  echo "<li>Welcome <br>" . $_COOKIE["email"] . "!</li>";
-	  echo "<li><a href=\"logout.php\">Logout</a></li>";
+	  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
+	  echo "<li><a href=\"php/logout.php\">Logout</a></li>";
 	}
 	else
 	{
-	   echo "<li><a href=\"login.php\">Login</a></li>";
-	   echo "<li><a href=\"register.php\">Register</a></li>";
+	   echo "<li><a href=\"php/login.php\">Login</a></li>";
+	   echo "<li><a href=\"php/register.php\">Register</a></li>";
 	}
 ?>
-
 </ul>
 </div>
 </div> 
