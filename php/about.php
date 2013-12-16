@@ -23,7 +23,6 @@
 <ul>
 <li><a href="../index.php">Home</a></li>
 <li><a href="browse.php">Browse</a></li>
-<li><a href="submit.php">Submit</a></li>
 <?php
 	if (isset($_SESSION["email"]))
 	{
