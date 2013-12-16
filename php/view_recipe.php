@@ -1,6 +1,8 @@
 <?php
     require 'database.php';
-
+	
+	session_start();
+	
     // Get category ID
     $recipe_id = $_GET['recipe_id'];
 	$category_name = $_GET['category'];
@@ -37,28 +39,38 @@
 <ul>
 <li><a href="../index.php">Home</a></li>
 <li><a href="browse.php">Browse</a></li>
-<li><a href="create_recipe.php">Submit</a></li>
-<li><a href="about.php">About</a></li>
 <?php
-	if (isset($_COOKIE["email"]))
+	if (isset($_SESSION["email"]))
 	{
-	  echo "<li>Welcome <br>" . $_COOKIE["email"] . "!</li>";
-	  echo "<li><a href=\"logout.php\">Logout</a></li>";
+	  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
+	  echo "<li><a href='submit.php'>Submit</a></li>";
+	  echo "<li><a href='logout.php'>Logout</a></li>";
 	}
 	else
 	{
-	   echo "<li><a href=\"login.php\">Login</a></li>";
-	   echo "<li><a href=\"register.php\">Register</a></li>";
+	   echo "<li><a href='login.php'>Login</a></li>";
+	   echo "<li><a href='register.php'>Register</a></li>";
 	}
 ?>
+<li><a href="about.php">About</a></li>
 </ul>
 </div>
 </div> 
 
 <div id="page">
-    <div id="main">
-
-    <h1><?php echo $category_name; ?></h1>
+        <div id="main">
+    
+        <h1><?php echo $category_name; ?></h1>
+        <?php
+            if (isset ($_GET['status'])) {
+                $status = $_GET['status'];
+                        
+                if ($status == "recipe_created") {
+                    echo "<h2>Recipe successfully submitted</h2>";
+                }			
+            }
+        ?>
+    
     	Title: </br> 
         </br> <input type="text" size="80" value=<?php echo $recipe['recipe_title']; ?> readonly> </br>
         Description: </br> 

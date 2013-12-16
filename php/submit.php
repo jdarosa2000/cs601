@@ -21,8 +21,6 @@
 <ul>
 <li><a href="../index.php">Home</a></li>
 <li><a href="browse.php">Browse</a></li>
-<li><a href="submit_recipe.php">Submit</a></li>
-<li><a href="about.php">About</a></li>
 <?php
 	if (isset($_SESSION["email"]))
 	{
@@ -35,6 +33,7 @@
 	   echo "<li><a href=\"register.php\">Register</a></li>";
 	}
 ?>
+<li><a href="about.php">About</a></li>
 </ul>
 </div>
 </div> 
@@ -45,7 +44,7 @@
 </div>
 
 <div id="form">
-<form name="myForm" action="../php/insert.php" onsubmit="return validateForm()" method="post">
+<form name="myForm" action="insert_recipe.php" onsubmit="return validateForm()" method="post">
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
 Description: </br> 
@@ -61,8 +60,6 @@ Category: </br>
           <option value="Vegetable">Vegetable</option>
       </select>
 </br>    
-User: </br> 
-</br> <input type="text" name="recipe_user" size="80"> </br>
 Ingredients: </br> 
 </br> <textarea name="ingredients"rows="20" cols="80"></textarea> </br>
 Instructions: </br> 
@@ -73,67 +70,9 @@ Instructions: </br>
 </div>
 
 <script type="text/javascript">
-	// $(document).ready(function () {
-		// prepare the data
-		/*
-		var users_source =
-		{
-			datatype: "json",
-			datafields: [
-				{ name: 'user_email' },
-				{ name: 'user_name' },
-			],
-			url: '../php/users.php'
-		};
-		var usersDataAdapter = new $.jqx.dataAdapter(users_source);
-		
-		$("#users_listbox").jqxDropDownList(
-		{
-			source: usersDataAdapter,
-			theme: 'classic',
-			width: 200,
-			height: 25,
-			selectedIndex: 1,
-			displayMember: 'user_email',
-			valueMember: 'user_email'
-		});
-		
-		*/
-		
-		/*
-		// bind dropdown list to 'select' event.
-		$('#users_listbox').bind('select', function (event) {
-			var args = event.args;
-			var selected_user = $('#users_listbox').jqxDropDownList('getItem', args.index);
-			alert('Selected: ' + selected_user.value);
-		});
-		*/
-		
-		/*
-		var categories_source =
-		{
-			datatype: "json",
-			datafields: [
-				{ name: 'category_name' },
-				{ name: 'categoryId' },
-			],
-			url: '../php/categories.php'
-		};
-		var catgoriesDataAdapter = new $.jqx.dataAdapter(categories_source);
-		
-		$("#categories_listbox").jqxDropDownList(
-		{
-			source: catgoriesDataAdapter,
-			theme: 'classic',
-			width: 200,
-			height: 25,
-			selectedIndex: 1,
-			displayMember: 'category_name',
-			valueMember: 'categoryId'
-		});
-		*/
+	
 				
-		function validateForm()
+	function validateForm()
 	{
 		var a=document.forms["myForm"]["recipe_title"].value;
 		if (a==null || a=="")
@@ -149,12 +88,7 @@ Instructions: </br>
 			return false;
 		}
     		
-		var d=document.forms["myForm"]["recipe_user"].value;
-		if (d==null || d=="")
-		{
-			alert("Enter a user name");
-			return false;
-		}
+		
 
   		var f=document.forms["myForm"]["recipe_ingredients"].value;
 		if (f==null || f=="")

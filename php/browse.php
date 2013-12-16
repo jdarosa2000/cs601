@@ -20,21 +20,21 @@
 <div id="navbar">
 <ul>
 <li><a href="../index.php">Home</a></li>
-<li><a href="search.php">Browse</a></li>
-<li><a href="submit_recipe.php">Submit</a></li>
-<li><a href="about.php">About</a></li>
 <?php
 	if (isset($_SESSION["email"]))
 	{
 	  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
-	  echo "<li><a href=\"php/logout.php\">Logout</a></li>";
+	  echo "<li><a href='submit.php'>Submit</a></li>";
+	  echo "<li><a href='logout.php'>Logout</a></li>";
 	}
 	else
 	{
-	   echo "<li><a href=\"login.php\">Login</a></li>";
-	   echo "<li><a href=\"register.php\">Register</a></li>";
+	   echo "<li><a href='login.php'>Login</a></li>";
+	   echo "<li><a href='register.php'>Register</a></li>";
 	}
 ?>
+<li><a href="about.php">About</a></li>
+
 </ul>
 </div>
 </div> 
