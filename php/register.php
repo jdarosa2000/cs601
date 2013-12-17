@@ -49,7 +49,14 @@
 				} 
 				if ($status == "confirm_password") {
 					echo "<h2>Passswords do not match. Please enter the appropriate details.</h2>";
-				} 
+				}
+				if ($status == "invalid_email") {
+					echo "<h2>Email address is not valid. Please enter a valid email address.</h2>";
+				}
+				
+				if ($status == "user_name") {
+					echo "<h2>Please enter a user name.</h2>";
+				}  
 			} else {
 					echo "<h2>Register</h2>";
 			}

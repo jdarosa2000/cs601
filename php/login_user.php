@@ -14,6 +14,6 @@
 		header('Location: ../index.php');
 	}
 	else {
-   		header('Location: login_error.php?status=invalid_login');
+   		header('Location: login.php?status=invalid_login');
 	}
 ?> 
