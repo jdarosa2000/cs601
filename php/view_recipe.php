@@ -30,6 +30,11 @@
 
 <body>
 
+<div id="top"> <!--Login/register section-->
+	<div id="login">
+			<?php include 'login_bar.php'; ?>
+    </div><!--END login div-->
+</div><!--END Login/register section-->  
 
 <div id="inner_wrapper"> 
 
