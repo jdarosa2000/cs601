@@ -13,6 +13,66 @@
 
 <body>
 
+<script language="javascript" type="text/javascript">
+<!-- 
+//Browser Support Code
+function validateUser(){
+ var ajaxRequest;  // The variable that makes Ajax possible!
+
+ try{
+   // Opera 8.0+, Firefox, Safari
+   ajaxRequest = new XMLHttpRequest();
+ }catch (e){
+   // Internet Explorer Browsers
+   try{
+      ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+   }catch (e) {
+      try{
+         ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+      }catch (e){
+         // Something went wrong
+         alert("Your browser broke!");
+         return false;
+      }
+   }
+ }
+ // Create a function that will receive data 
+ // sent from the server and will update
+ // div section in the same page.
+ ajaxRequest.onreadystatechange = function(){
+   if(ajaxRequest.readyState == 4){
+      var ajaxDisplay = document.getElementById('ajaxDiv');
+	  var rsp = ajaxRequest.responseText;
+	  
+	  if ( rsp.indexOf("success") != -1) {
+		  //alert(ajaxRequest.responseText);
+		  window.location.href="login.php?status=registered";
+	  } else {
+      	ajaxDisplay.innerHTML = ajaxRequest.responseText;
+	  }
+   }
+ }
+ 
+ // Now get the value from user and pass it to
+ // server script.
+ var name = document.getElementById('name').value;
+ var email = document.getElementById('email').value;
+ var password = document.getElementById('password').value;
+ var confirm_password = document.getElementById('confirm_password').value;
+ 
+ var queryString = "?email=" + email ;
+ queryString +=  "&name=" + name;
+ queryString +=  "&password=" + password;
+ queryString +=  "&confirm_password=" + confirm_password;
+ ajaxRequest.open("GET", "register_user.php" + 
+                              queryString, true);
+ ajaxRequest.send(null); 
+}
+
+
+//-->
+</script>
+
 <div id="top"> <!--Login/register section-->
 	<div id="login">
 			<?php include 'login_bar.php'; ?>
@@ -27,39 +87,17 @@
 	<?php include 'nav_bar.php'; ?>
 </div>
 </div> 
-    <form action="register_user.php" method="post">
-
-        <?php
-			if (isset ($_GET['status'])) {
-				$status = $_GET['status'];
-				
-				if ($status == "email_exists") {
-					echo "<h2>Email is already registered. Register with a new email.</h2>";
-				} 
-				if ($status == "confirm_password") {
-					echo "<h2>Passswords do not match. Please enter the appropriate details.</h2>";
-				}
-				if ($status == "invalid_email") {
-					echo "<h2>Email address is not valid. Please enter a valid email address.</h2>";
-				}
-				
-				if ($status == "user_name") {
-					echo "<h2>Please enter a user name.</h2>";
-				}  
-			} else {
-					echo "<h2>Register</h2>";
-			}
-		
-		?>
+    <form name="register">
         <b>Name:</b><br />
-        <input type="text" name="name" /><br />
+        <input type="text" id="name" /><br />
         <b>Email:</b><br />
-        <input type="text" name="email" /><br />
+        <input type="text" id="email" /><br />
         <b>Password:</b><br />
-        <input type="text" name="password" /><br />
+        <input type="text" id="password" /><br />
         <b>Confirm Password:</b><br />
-        <input type="text" name="confirm_password" /><br />
-        <input type="submit" value="Register!" />
+        <input type="text" id="confirm_password" /><br />
+        <input type="button" value="Register" onclick='validateUser()'/>
      </form>
+      <div id='ajaxDiv'></div>
     </body>
 </html>
