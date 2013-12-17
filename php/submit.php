@@ -48,7 +48,7 @@
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
 Description: </br> 
-</br> <textarea rows="2" name="recipe_desc" cols="80"></textarea> </br>
+</br> <textarea rows="1" name="recipe_desc" cols="80"></textarea> </br>
 Category: </br> 
 <br> <select name="category">
           <option value="Pasta">Pasta</option>
@@ -61,9 +61,9 @@ Category: </br>
       </select>
 </br>    
 Ingredients: </br> 
-</br> <textarea name="ingredients"rows="20" cols="80"></textarea> </br>
+</br> <textarea name="ingredients"rows="10" cols="80"></textarea> </br>
 Instructions: </br> 
-</br> <textarea name="recipe_instructions"rows="20" cols="80"></textarea> </br>
+</br> <textarea name="recipe_instructions"rows="10" cols="80"></textarea> </br>
 </br>
 </br><input type="submit" value="Submit Recipe"> 
 </form>
@@ -106,5 +106,20 @@ Instructions: </br>
 	}
 	
 </script>
+
+<div id="footer">
+
+<div id="social_title">
+<p>Join the conversation:</p>
+</div>
+
+<div id="social">
+<a href="http://www.facebook.com"><img src="../images/icons/facebook.png" /></a>
+<a href="http://www.pinterest.com"><img src="../images/icons/pinterest.png" /></a>
+<a href="http://www.twitter.com"><img src="../images/icons/twitter.png" /></a>
+</div>
+</div>
+
 </body>
 </html>
+

@@ -77,25 +77,22 @@
    	<a href="../php/browse_category.php?category=Soup"><img src="../images/soup_cat.jpg" /></a>
 </div>
 
-<div id="footer"></div>
-
 </div>
 
 
 
-<script>
-function getCategory(cat) {
-    category = cat; 
-	 alert(cat);
-	 $.ajax({
-		  type: 'POST',
-		  url: 'browse_category.php',
-		  data: {'category': category},
-	});
- }
-</script>
+<div id="footer">
 
+<div id="social_title">
+<p>Join the conversation:</p>
+</div>
 
+<div id="social">
+<a href="http://www.facebook.com"><img src="../images/icons/facebook.png" /></a>
+<a href="http://www.pinterest.com"><img src="../images/icons/pinterest.png" /></a>
+<a href="http://www.twitter.com"><img src="../images/icons/twitter.png" /></a>
+</div>
+</div>
 
 </body>
 
