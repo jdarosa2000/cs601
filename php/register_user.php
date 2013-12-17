@@ -6,16 +6,23 @@
 	$result = $db->query($sql);
 	$count = $result->fetchColumn();
 	
-	//echo $count;
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$psw = $_POST['password'];
+	$confirm_psw = $_POST['confirm_password'];
 
 	if($count > 0){
-		header('Location: register.php?status=email_exists');
+		header('Location: register.php?status=email_exists' .
+			'&name=' .$name. 
+			'&email=' .$email.
+			'&password=' .$psw.
+			'&confirm_password=' .$confirm_psw);
 	}
-	else if ( $_POST['password'] != $_POST['confirm_password']) {
+	else if ( $psw != $confirm_psw) {
 		header('Location: register.php?status=confirm_password');
 	} else if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
     	header('Location: register.php?status=invalid_email');
-	} else if (!isset($_POST[user_name])) {
+	} else if ($_POST['name'] == '') {
     	header('Location: register.php?status=user_name');
 	}
 	else {
