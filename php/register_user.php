@@ -12,11 +12,7 @@
 	$confirm_psw = $_POST['confirm_password'];
 
 	if($count > 0){
-		header('Location: register.php?status=email_exists' .
-			'&name=' .$name. 
-			'&email=' .$email.
-			'&password=' .$psw.
-			'&confirm_password=' .$confirm_psw);
+		header('Location: register.php?status=email_exists');
 	}
 	else if ( $psw != $confirm_psw) {
 		header('Location: register.php?status=confirm_password');

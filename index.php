@@ -20,24 +20,7 @@
     <div id="header">
         <div id="logo"><img src="images/Logo.jpg" /></div>
         <div id="navbar">
-			<ul>
-			  <li><a href="index.php">Home</a></li>
-            <li><a href="php/browse.php">Browse</a></li>
-  			<?php
-                if (isset($_SESSION["email"]))
-                {
-                  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
-				  	echo "<li><a href='php/submit.php'>Submit</a></li>";
-                  echo "<li><a href='php/logout.php'>Logout</a></li>";
-                }
-                else
-                {
-                   echo "<li><a href='php/login.php'>Login</a></li>";
-                   echo "<li><a href='php/register.php'>Register</a></li>";
-                }
-            ?>
-            <li><a href="php/about.php">About</a></li>
-        	</ul>
+			  <?php include 'php/nav_bar.php'; ?>
     </div>
 </div> 
 

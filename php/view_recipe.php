@@ -36,24 +36,7 @@
 <div id="header">
 <div id="logo"><img src="../images/Logo.jpg" /></div>
 <div id="navbar">
-<ul>
-<li><a href="../index.php">Home</a></li>
-<li><a href="browse.php">Browse</a></li>
-<?php
-	if (isset($_SESSION["email"]))
-	{
-	  echo "<li>Welcome <br>" . $_SESSION["email"] . "!</li>";
-	  echo "<li><a href='submit.php'>Submit</a></li>";
-	  echo "<li><a href='logout.php'>Logout</a></li>";
-	}
-	else
-	{
-	   echo "<li><a href='login.php'>Login</a></li>";
-	   echo "<li><a href='register.php'>Register</a></li>";
-	}
-?>
-<li><a href="about.php">About</a></li>
-</ul>
+<?php include 'nav_bar.php'; ?></div>
 </div>
 </div> 
 
