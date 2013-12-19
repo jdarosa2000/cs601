@@ -75,9 +75,9 @@
 <ul>
 <li>1. Brine, baby, brine! Ya gotta brine that poultry to really give it the super flavor.</li>
 <li>2. Store spices in a cool, dark place, not above your stove. Humidity, light and heat will cause herbs and spices to lose their flavor.</li>
-<li>3. Remember, y'all, it’s all about the prep. Take away the stress by doing the prep the night or day before. You'll look like a star.</li>
+<li>3. Remember, y'all, it's all about the prep. Take away the stress by doing the prep the night or day before. You'll look like a star.</li>
 <li>4. The smaller the item, the higher the baking temperature. For example, I bake mini chocolate chip-toffee cookies at 500 degrees F for only 4 minutes. Perfect end result.</li>
-<li>5. If you're cooking for someone important — whether it's your boss or a date — never try a new recipe and a new ingredient at the same time.</li>
+<li>5. If you're cooking for someone important - whether it's your boss or a date - never try a new recipe and a new ingredient at the same time.</li>
 </ul>
 <p><a href="http://www.foodnetwork.com/chefs/100-greatest-cooking-tips-of-all-time/index.html">Click here for the full Food Network list!</a></p>
 </div>
@@ -86,12 +86,13 @@
 <div class="content_box" id="content_health">
 <div class="content_title">Healthy Eating Habits</div>
 <img src="images/tomato.jpg" border="0" />
-<p>It’s the key to a healthy tomorrow. Get tips on simple, affordable and delicious changes you can make to the way you shop for, cook and eat your meals.</p>
+<p>It's the key to a healthy tomorrow. Get tips on simple, affordable and delicious changes you can make to the way you shop for, cook and eat your meals.</p>
 <p><a href="http://www.wholefoodsmarket.com/healthy-eating">Click here for healthy foods resources</a></p>
 </div>
 
 </div><!--END CONTENT CONTAINER-->
-      
+   
+   
 <div id="footer">
 
 <div id="social_title">
