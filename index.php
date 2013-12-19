@@ -15,13 +15,12 @@
 
 <body>
 
-<<div id="top"> <!--Login/register section-->
+<div id="top"> <!--Login/register section-->
 	<div id="login">
 			<?php include '/php/login_bar.php'; ?>
     </div><!--END login div-->
 </div><!--END Login/register section--> 
 
-<div id="inner_wrapper"> 
 
 <div id="inner_wrapper"> 
 

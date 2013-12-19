@@ -44,7 +44,7 @@
 </div> 
 
 
-<div id="gallery"><img src="images/bg_fruit.png" /></div>
+<div id="gallery"><center><img src="../images/bg_fruit.png" /></center></div>
 
 <div id="content_container"> 
 
@@ -77,7 +77,23 @@
         </table>
     </div>
     </div><!-- end main -->
-    <div id="footer"></div>
-</div><!-- end page -->
+    <div id="footer">
+
+<div id="social_title">
+<p>Join the conversation:</p>
+</div>
+
+<div id="social">
+<a href="http://www.facebook.com"><img src="../images/icons/facebook.png" /></a>
+<a href="http://www.pinterest.com"><img src="../images/icons/pinterest.png" /></a>
+<a href="http://www.twitter.com"><img src="../images/icons/twitter.png" /></a>
+</div>
+</div>
+
+</div><!--END Main content wrapper-->
+
+
 </body>
+
+
 </html>

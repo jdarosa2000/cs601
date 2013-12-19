@@ -26,7 +26,7 @@
 </div>
 </div> 
 
-<div id="gallery"><img src="../images/submit_head.jpg" /></div>
+<div id="gallery"><center><img src="../images/submit_head.jpg" /></center></div>
 
 <div id="content_container">
 
@@ -110,6 +110,11 @@ Instructions: </br>
 </div>
 </div>
 
+</div><!--END Main content wrapper-->
+
+
 </body>
+
+
 </html>
 
