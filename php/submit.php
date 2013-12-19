@@ -26,12 +26,14 @@
 </div>
 </div> 
 
+<div id="gallery"><img src="../images/submit_head.jpg" /></div>
 
-<div id="gallery">
-<img src="../images/cover1.jpg" />
-</div>
+<div id="content_container">
+
+
 
 <div id="form">
+<h2>Share All Your Family Secrets!</h2>
 <form name="myForm" action="insert_recipe.php" onsubmit="return validateForm()" method="post">
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
