@@ -43,6 +43,11 @@
 </div>
 </div> 
 
+
+<div id="gallery"><img src="images/bg_fruit.png" /></div>
+
+<div id="content_container"> 
+
 <div id="page">
     <div id="main">
 

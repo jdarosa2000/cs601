@@ -27,9 +27,8 @@
 	<?php include 'nav_bar.php'; ?></div>
 </div> 
 
-<div id="gallery">
-<img src="../images/cover1.jpg" />
-</div>
+
+<div id="content_container">
 
 <center><img src="../images/search_head.jpg" /></center>
 
@@ -37,8 +36,6 @@
 	<div class="content_title" >Desserts</div>
      <a href="../php/browse_category.php?category=Dessert"><img src="../images/dessert_cat.jpg" /></a>
 </div>
-
-
 
 <div class="content_cat">
 	<div class="content_title">Pasta Dishes</div>

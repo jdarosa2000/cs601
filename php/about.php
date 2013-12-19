@@ -29,10 +29,14 @@
 </div>
 </div> 
 
+<div id="gallery"><img src="../images/about_head.jpg" /></div>
+
+<div id="content_container">
+
 
 <!--Start Content section-->
 
-<div class="content_box" id="recipe_day">
+<div class="content_box" id="content_statement">
 	<div class="content_title">About the Delicious Home</div>
      <img src="../images/grandmas-kitchen-cristopher-ernest.jpg" />
 <p><i>Idea behind the website</i></p>
@@ -44,7 +48,7 @@
 <p>The web site will be public and thus will be available to anyone on the internet. But the target audience are groups of people with some common bond, and in most cases that bond will be familial and/or family friends.</p>
 </div>
 
-<div class="content_box" id="content_main">
+<div class="content_box" id="content_team">
 	<div class="content_title">Project Team</div>
 	<img src="../images/familyrecipes.jpg" />
      
@@ -53,7 +57,7 @@
 <p>Carolyn Persad</p>
 </div>
      
-
+</div>
 <div id="footer">
 
 <div id="social_title">

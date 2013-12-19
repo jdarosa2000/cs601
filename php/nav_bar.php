@@ -25,9 +25,9 @@
 //	}
 	echo '<li><a href="/index.php">Home</a></li>';
 	echo '<li><a href="/php/browse.php">Browse</a></li>';
-	if ((basename($_SERVER['PHP_SELF']) != "submit.php") and (isset($_SESSION["email"]))) {
-		echo '<li><a href="/php/submit.php">Submit</a></li>';
-	}
+	//if ((basename($_SERVER['PHP_SELF']) != "submit.php") and (isset($_SESSION["email"]))) {
+	echo '<li><a href="/php/submit.php">Submit</a></li>';
+	//}
 	echo '<li><a href="/php/about.php">About</a></li>';
 	
 	echo '</ul>';
