@@ -2,9 +2,9 @@
 	include ("database.php");
 
 	$email = $_GET['user_email'];
-	$psw = $_GET['user_password'];
+	$psw = md5($_GET['user_password']);
 	//make sure email is registered
-	$sql = "SELECT * from users WHERE user_email='" . $email . "' AND user_password='" . $psw . "'";
+	$sql = "SELECT * from users WHERE user_email='" . $email . "' AND user_password='".$psw."'";
 	//echo $sql;
 	$result = $db->query($sql);
 	$count = $result->fetchColumn();

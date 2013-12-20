@@ -29,7 +29,7 @@
 		echo "<h2>Please enter a user name.</h2>";
 	}
 	else {
-		$sql = "INSERT into users VALUES (null, '".$name."', '".$email."', '".$password."')";
+		$sql = "INSERT into users VALUES (null, '".$name."', '".$email."', '".md5($psw)."')";
 		$stmt = $db->prepare($sql);
 		$stmt->execute();
 		//echo "success";
