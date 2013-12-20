@@ -89,9 +89,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cs601`;
-INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Jaime DaRosa', 'jdarosa2000@hotmail.com', 'jdarosa2000@hotmail.com');
-INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Carolyn Persad', 'cpersad@bu.edu', 'cpersad@bu.edu');
-INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'James Bransford', 'jamesb@bu.edu', 'jamesb@bu.edu');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Jaime DaRosa', 'jdarosa2000@hotmail.com', '594bdc173eb61c83c33f752e2b2348f8');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'Carolyn Persad', 'cpersad@bu.edu', 'd86f37595e6aeac1c84174736968695b');
+INSERT INTO `cs601`.`users` (`userId`, `user_name`, `user_email`, `user_password`) VALUES (NULL, 'James Bransford', 'jamesb@bu.edu', '2a6d452f70afaa7974eedd08e68310e5');
 
 COMMIT;
 

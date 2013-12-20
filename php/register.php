@@ -97,9 +97,9 @@ function validateUser(){
         <b>Email:</b><br />
         <input type="text" id="email" /><br />
         <b>Password:</b><br />
-        <input type="text" id="password" /><br />
+        <input type="password" id="password" /><br />
         <b>Confirm Password:</b><br />
-        <input type="text" id="confirm_password" /><br />
+        <input type="password" id="confirm_password" /><br />
         <input type="button" value="Register" onclick='validateUser()'/>
      </form>
       <div id='ajaxDiv'></div>
