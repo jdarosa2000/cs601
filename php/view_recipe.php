@@ -51,6 +51,7 @@
 
 <div id="page">
         <div id="main">
+        <div id="form">
     
         <h1><?php echo $category_name; ?></h1>
         <?php
@@ -74,7 +75,7 @@
         Instructions: </br> 
         </br> <textarea readonly rows="20" cols="80"><?php echo $recipe['recipe_steps']; ?></textarea> </br>
 
-   
+   	</div><!-- end form -->
     </div><!-- end main -->
    
 <div id="footer">

@@ -50,7 +50,7 @@
 
 <div id="page">
     <div id="main">
-
+	<div id="form">
     <h1>Recipe List</h1>
     
    <div id="content">
@@ -76,6 +76,7 @@
             <?php endforeach; ?>
         </table>
     </div>
+    </div><!--end form -->
     </div><!-- end main -->
     <div id="footer">
 

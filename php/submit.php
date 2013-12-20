@@ -8,9 +8,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>The Delicious Home</title>
 <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+
+<?php 
+	 if (empty($_SESSION['email'])) {
+		echo '<script type="text/javascript"> var session=false;</script>';
+	 } else {
+		echo '<script type="text/javascript"> var session=true;</script>';
+	 }
+?>
+      
 </head>
 
-<body>
+<body onload="checkSession()">
 
 <div id="top"> <!--Login/register section-->
 	<div id="login">
@@ -31,10 +40,9 @@
 <div id="content_container">
 
 
-
 <div id="form">
-<h2>Share All Your Family Secrets!</h2>
-<form name="myForm" action="insert_recipe.php" onsubmit="return validateForm()" method="post">
+<div id = "sessionCheck"><h2>Share All Your Family Secrets!</h2></div>
+<form name="submitRecipe" action="insert_recipe.php" onsubmit="return validateForm()" method="post">
 Title: </br> 
 </br> <input type="text" name="recipe_title" size="80"> </br>
 Description: </br> 
@@ -55,13 +63,32 @@ Ingredients: </br>
 Instructions: </br> 
 </br> <textarea name="recipe_instructions"rows="10" cols="80"></textarea> </br>
 </br>
-</br><input type="submit" value="Submit Recipe"> 
+</br><input id = "submit_button" type="submit" value="Submit Recipe"> 
 </form>
 </div>
 
 <script type="text/javascript">
 	
-				
+	function checkSession()
+	{
+		
+		//alert(session);
+		if (session == false) {
+			disableSubmitForm();
+			document.getElementById('sessionCheck').innerHTML = "<h1>Please log in to submit a recipe.</h2>";
+		}
+		
+		
+	}
+	
+	function disableSubmitForm() {
+		var limit = document.forms[0].elements.length;
+		for (i=0;i<limit;i++) {
+		  document.forms[0].elements[i].disabled = true;
+		}
+	}
+	
+			
 	function validateForm()
 	{
 		var a=document.forms["myForm"]["recipe_title"].value;
